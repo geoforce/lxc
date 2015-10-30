@@ -65,6 +65,7 @@ end
 include_recipe 'lxc::service'
 
 chef_gem 'elecksee' do
+  compile_time true
   if(node[:lxc][:elecksee][:version_restriction])
     version node[:lxc][:elecksee][:version_restriction]
   end
